@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: lightsteelblue;
 }
 
 header {
@@ -24,14 +24,14 @@ nav {
 }
 
 nav a {
-    color: #ffffff;
+    color: whitesmoke;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
 }
 
 nav a:hover {
-    background: #e8491d;
+    background: steelblue;
 }
 
 .container {
