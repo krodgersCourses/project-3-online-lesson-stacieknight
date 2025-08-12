@@ -1,7 +1,10 @@
 /* A handy list of color names: https://www.w3schools.com/colors/colors_names.asp */
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -16,7 +19,9 @@ header {
 }
 
 h1, h2, h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
     color: #35424a;
+    letter-spacing: 1px;
 }
 
 nav {
