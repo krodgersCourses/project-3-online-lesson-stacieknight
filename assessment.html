@@ -3,20 +3,58 @@
   <head>
     <title>Lesson Assessment</title>
     <link rel="stylesheet" href="styles.css">
+    
   </head>
   <body>
-    <h1>Lesson Assessment</h1>
+    <h1>Lesson Exit Ticket</h1>
     <p>Test your knowledge with this interactive quiz!</p>
     <nav>
       <a href="index.html">Home</a> |
       <a href="overview.html">Overview</a> |
       <a href="resources.html">Resources</a>
     </nav>
-    <!-- Example interactive element -->
-    <form>
-      <label for="q1">What is the main topic of this lesson?</label><br>
-      <input type="text" id="q1" name="q1"><br>
-      <input type="submit" value="Submit">
-    </form>
-  </body>
-</html>
+    <div class="container">
+      <form id="quizForm" autocomplete="off">
+        <div class="question">
+          <label>1. What is the main topic of this lesson?</label>
+          <div class="choices">
+            <label><input type="radio" name="q1" value="a"> Cooking Techniques</label>
+            <label><input type="radio" name="q1" value="b"> Technology in the Classroom</label>
+            <label><input type="radio" name="q1" value="c"> Ancient History</label>
+          </div>
+        </div>
+        <div class="question">
+          <label>2. Which of these is a benefit of using technology in teaching?</label>
+          <div class="choices">
+            <label><input type="radio" name="q2" value="a"> Distracts students</label>
+            <label><input type="radio" name="q2" value="b"> Enhances learning experiences</label>
+            <label><input type="radio" name="q2" value="c"> Reduces communication</label>
+          </div>
+        </div>
+        <div class="question">
+          <label>3. What should you consider when integrating technology?</label>
+          <div class="choices">
+            <label><input type="radio" name="q3" value="a"> Lesson objectives and accessibility</label>
+            <label><input type="radio" name="q3" value="b"> Only the cost</label>
+            <label><input type="radio" name="q3" value="c"> Ignore student needs</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Correct answers
+      const answers = { q1: 'b', q2: 'b', q3: 'a' };
+      document.querySelectorAll('input[type=radio]').forEach(input => {
+        input.addEventListener('change', function() {
+          const name = this.name;
+          const selected = this.value;
+          const labels = Array.from(document.querySelectorAll(`input[name=${name}]`)).map(i => i.parentElement);
+          labels.forEach(label => label.classList.remove('correct', 'incorrect'));
+          if (selected === answers[name]) {
+            this.parentElement.classList.add('correct');
+          } else {
+            this.parentElement.classList.add('incorrect');
+          }
+        });
+      });
+    </script>

@@ -79,3 +79,9 @@ footer {
     max-width: 100%;
     height: 315px;
 }
+/* Assessment styles */
+      .correct { background-color: #c8e6c9; }
+      .incorrect { background-color: #ffcdd2; }
+      .question { margin-bottom: 24px; }
+      .choices label { display: block; margin: 6px 0; padding: 4px; border-radius: 4px; cursor: pointer; }
+   
